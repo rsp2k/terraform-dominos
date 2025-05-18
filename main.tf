@@ -16,7 +16,7 @@ data "dominos_address" "addr" {
   street      = var.street
   city        = var.city
   region      = var.state
-  postal_code = var.postal_code
+  postal_code = var.zip_code
 }
 
 data "dominos_store" "store" {
