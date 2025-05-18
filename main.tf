@@ -1,11 +1,4 @@
 provider "dominos" {
-  # IMPORTANT: Configure the provider to use the test API
-  # Check the provider docs for the exact attribute name. It might be:
-  # test_api = true
-  # or
-  # environment = "test"
-  # Assuming 'test_api' for this example:
-  test_api = true
 }
 
 # Construct the address string needed by the data source/resource
