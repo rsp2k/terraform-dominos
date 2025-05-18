@@ -12,6 +12,13 @@ provider "dominos" {
   }
 }
 
+data "dominos_address" "addr" {
+  street      = var.street
+  city        = var.city
+  region      = var.state
+  postal_code = var.postal_code
+}
+
 data "dominos_store" "store" {
   address_url_object = data.dominos_address.addr.url_object
 }
