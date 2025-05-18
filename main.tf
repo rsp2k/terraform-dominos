@@ -13,7 +13,7 @@ provider "dominos" {
 }
 
 data "dominos_address" "addr" {
-  street      = var.street
+  street      = var.street_address
   city        = var.city
   region      = var.state
   postal_code = var.zip_code
