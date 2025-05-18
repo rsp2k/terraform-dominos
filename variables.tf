@@ -24,9 +24,9 @@ variable "phone" {
 }
 
 variable "street_address" {
-  description = "Street address to find a nearby test store."
+  description = "Street address to find a nearby store."
   type        = string
-  default     = "123 Main St" # Use an address likely recognized by the test API or a generic one
+  default     = "123 Main St"
 }
 
 variable "city" {
@@ -47,10 +47,10 @@ variable "zip_code" {
   default     = "90210"
 }
 
-variable "pizza_type_query" {
-  description = "What kind of pizza to search for on the menu (e.g., 'Pepperoni Pizza', 'Cheese Pizza')."
-  type        = string
-  default     = "Pepperoni Pizza" # A common item likely on test menus
+variable "query_string" {
+  description = "What kind of pizza to search for on the menu."
+  type        = list
+  default     = ["Pepperoni", "Olives"]
 }
 
 variable "quantity" {
