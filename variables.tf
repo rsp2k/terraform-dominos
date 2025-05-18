@@ -72,3 +72,15 @@ variable "order_type" {
     error_message = "Order type must be either 'Delivery' or 'Carryout'."
   }
 }
+
+# Construct the address string needed by the data source/resource
+locals {
+  full_address = "${var.street_address}, ${var.city}, ${var.state} ${var.zip_code}"
+  # Format address for the order resource (check provider docs for required structure)
+  delivery_address = {
+    street = var.street_address
+    city   = var.city
+    region = var.state
+    postal_code = var.zip_code
+  }
+}
