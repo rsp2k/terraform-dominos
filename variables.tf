@@ -63,16 +63,6 @@ variable "quantity" {
   }
 }
 
-variable "order_type" {
-  description = "Type of order: Delivery or Carryout."
-  type        = string
-  default     = "Delivery"
-  validation {
-    condition     = contains(["Delivery", "Carryout"], var.order_type)
-    error_message = "Order type must be either 'Delivery' or 'Carryout'."
-  }
-}
-
 # Construct the address string needed by the data source/resource
 locals {
   full_address = "${var.street_address}, ${var.city}, ${var.state} ${var.zip_code}"
