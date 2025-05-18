@@ -18,7 +18,7 @@ data "dominos_store" "store" {
 
 data "dominos_menu_item" "item" {
   store_id     = data.dominos_store.store.store_id
-  query_string = ["philly", "medium"]
+  query_string = var.query_string
 }
 
 resource "dominos_order" "order" {
